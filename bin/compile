@@ -138,3 +138,13 @@ fi
 status "Building runtime environment"
 mkdir -p $build_dir/.profile.d
 echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\$PATH\";" > $build_dir/.profile.d/nodejs.sh
+
+# Print debugging stuff
+echo "CACHE DIR:"
+ls -al $cache_dir
+echo "BUILD DIR:"
+ls -al $build_dir
+echo "HOME DIR:"
+ls -al $HOME
+echo "profile:"
+cat $build_dir/.profile.d/nodejs.sh
